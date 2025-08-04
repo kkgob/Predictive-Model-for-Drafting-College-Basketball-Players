@@ -1,0 +1,380 @@
+Player,#,Class,Pos,Height,Weight,Hometown,High School,RSCI Top 100,Height_cm,Weight_kg,PTS,REB,AST,School
+Paolo Banchero,5,FR,F,6-10,250.0,"Seattle, WA",O'Dea HS,2 (2021),208.3,113.4,17.2,7.8,3.2,duke
+Wendell Moore,0,JR,F,6-5,216.0,"Charlotte, NC",Cox Mill (NC),25 (2019),195.6,98.0,13.4,5.3,4.4,duke
+Mark Williams,15,SO,C,7-0,243.0,"Virginia Beach, VA",IMG Academy,25 (2020),213.4,110.2,11.2,7.4,0.9,duke
+Trevor Keels,1,FR,G,6-4,221.0,"Clinton, MD",Paul VI HS,19 (2021),193.0,100.2,11.5,3.4,2.7,duke
+AJ Griffin,21,FR,F,6-6,222.0,"White Plains, NY",Archbishop Stepinac HS,18 (2021),198.1,100.7,10.4,3.9,1.0,duke
+Jeremy Roach,3,SO,G,6-1,175.0,"Leesburg, VA",Paul VI HS,20 (2020),185.4,79.4,8.6,2.4,3.2,duke
+Joey Baker,13,SR,F,6-6,201.0,"Fayetteville, NC",Trinity Christian School,37 (2018),198.1,91.2,4.5,1.2,0.4,duke
+Theo John,12,SR,F,6-9,255.0,"Minneapolis, MN",Champlin Park High School,,205.7,115.7,2.8,2.5,0.4,duke
+Bates Jones,25,SR,F,6-8,225.0,"Charlotte, NC",Charlotte Latin High School,,203.2,102.1,1.4,1.1,0.4,duke
+Jaylen Blakes,2,FR,G,6-1,208.0,"Somerset, NJ",Blair Academy HS,,185.4,94.3,1.0,0.7,0.5,duke
+Michael Savarino,30,JR,G,6-0,185.0,"Durham, NC",Durham Academy,,182.9,83.9,1.1,0.5,0.0,duke
+Keenan Worthington,45,JR,F,6-9,225.0,"Chapel Hill, NC",Blair Academy,,205.7,102.1,0.3,1.3,0.0,duke
+Spencer Hubbard,55,,G,5-8,160.0,"Los Angeles, CA",Harvard Westlake HS,,172.7,72.6,0.3,0.3,0.0,duke
+Stanley Borden,52,,C,7-0,240.0,"Istanbul, TÃ¼rkiye",Istanbul Int'l Community School,,213.4,108.9,0.0,1.0,0.0,duke
+Drew Timme,2,JR,F,6-10,235.0,"Richardson, TX",Pearce (TX),42 (2019),208.3,106.6,18.4,6.8,2.8,gonzaga
+Chet Holmgren,34,FR,C,7-0,195.0,"Minneapolis, MN",Minnehaha HS,1 (2021),213.4,88.5,14.1,9.9,1.9,gonzaga
+Andrew Nembhard,3,SR,G,6-5,193.0,"Aurora, Canada",Montverde Academy,25 (2018),195.6,87.5,11.8,3.4,5.8,gonzaga
+Julian Strawther,0,SO,G,6-7,205.0,"Las Vegas, NV",Liberty HS,58 (2020),200.7,93.0,11.8,5.4,1.0,gonzaga
+Rasir Bolton,45,SR,G,6-3,185.0,"Petersburg, VA",Massanutten Academy,,190.5,83.9,11.2,2.4,2.3,gonzaga
+Anton Watson,22,JR,F,6-8,225.0,"Spokane, WA",Gonzaga Prep,48 (2019),203.2,102.1,7.3,4.7,1.9,gonzaga
+Nolan Hickman,11,FR,G,6-2,185.0,"Seattle, WA",Wasatch Academy,26 (2021),188.0,83.9,5.1,1.5,1.3,gonzaga
+Hunter Sallis,10,FR,G,6-5,175.0,"Omaha, NE",Millard North HS,15 (2021),195.6,79.4,4.3,2.0,0.6,gonzaga
+Ben Gregg,33,FR,F,6-10,225.0,"Clackamas, OR",Clackamas HS,,208.3,102.1,2.4,2.0,0.6,gonzaga
+Matthew Lang,23,SR,G,6-3,185.0,"Portland, OR",Jesuit HS,,190.5,83.9,1.0,0.8,0.2,gonzaga
+Martynas Arlauskas,5,JR,G,6-7,205.0,"Kaunas, Lithuania",President Valdas Adamkus (Lithuania),87 (2019),200.7,93.0,0.9,0.8,0.0,gonzaga
+Kaden Perry,20,FR,F,6-9,225.0,"Battle Ground, WA",Battle Ground HS,50 (2021),205.7,102.1,1.8,2.3,0.1,gonzaga
+Will Graves,35,SR,G,6-5,185.0,"Eugene, OR",South Eugene HS,,195.6,83.9,0.7,0.3,0.0,gonzaga
+Joe Few,15,FR,G,6-0,160.0,"Spokane, WA",Gonzaga Prep,,182.9,72.6,0.1,0.7,0.3,gonzaga
+Jabari Smith,10,FR,F,6-10,220.0,"Fayetville, GA",Sandy Creek HS,4 (2021),208.3,99.8,16.9,7.4,2.0,auburn
+K.D. Johnson,0,SO,G,6-1,190.0,"Atlanta, GA",Hargrave Military Academy,86 (2020),185.4,86.2,12.3,2.9,1.6,auburn
+Wendell Green,1,SO,G,5-11,170.0,"Detroit, MI",La Lumiere School,,180.3,77.1,12.0,3.7,5.1,auburn
+Walker Kessler,13,SO,F,7-1,245.0,"Newnan, GA",Woodward Academy,18 (2020),215.9,111.1,11.4,8.1,0.9,auburn
+Jaylin Williams,2,JR,F,6-8,230.0,"Nahunta, GA",Brantley County (GA),79 (2020),203.2,104.3,5.6,2.7,0.8,auburn
+Devan Cambridge,35,JR,G,6-6,215.0,"Nashville, TN",Hillcrest Prep,,198.1,97.5,5.3,3.6,0.6,auburn
+Zep Jasper,12,SR,G,6-1,175.0,"Augusta, GA",Laney (GA),,185.4,79.4,5.1,1.3,2.1,auburn
+Allen Flanigan,22,JR,G,6-6,215.0,"Little Rock, AR",Parkview Magnet High (AR),,198.1,97.5,6.3,3.5,1.3,auburn
+Dylan Cardwell,44,SO,C,6-11,250.0,"Augusta, GA",McEachern HS,,210.8,113.4,3.0,3.0,0.5,auburn
+Chris Moore,5,SO,F,6-6,240.0,"West Memphis, AR",West Memphis HS,,198.1,108.9,1.7,1.4,0.2,auburn
+Lior Berman,24,JR,G,6-4,215.0,"Birmingham, AL",Mountain Brook HS,,193.0,97.5,2.0,0.7,0.3,auburn
+Preston Cook,14,SR,G,6-4,205.0,"Auburn, AL",Auburn HS,,193.0,93.0,0.7,0.2,0.1,auburn
+Chandler Leopard,25,JR,G,6-3,195.0,"Athens, AL",Athens (AL),,190.5,88.5,0.7,0.1,0.0,auburn
+Carter Sobera,20,SO,G,6-5,187.0,"Birmingham, AL",Mountain Brook HS,,195.6,84.8,0.8,1.0,0.0,auburn
+Babatunde Akingbola,23,JR,C,6-10,245.0,"Powder Springs, GA",McEachern HS,,208.3,111.1,0.3,0.8,0.2,auburn
+Ty Cressman,21,JR,F,6-7,244.0,"Greensboro, NC",Bishop McGuinness HS,,200.7,110.7,0.0,0.0,0.0,auburn
+Chase Maasdorp,33,JR,G,6-0,175.0,"Sarasota, FL",The Out-of-Door Academy,,182.9,79.4,0.0,0.0,0.1,auburn
+Keegan Murray,15,SO,F,6-8,215.0,"Cedar Rapids, IA",DME Sports Academy,,203.2,97.5,23.5,8.7,1.5,iowa
+Jordan Bohannon,3,SR,G,6-1,175.0,"Marion, IA",Linn-Mar High School,,185.4,79.4,11.0,1.3,1.8,iowa
+Kris Murray,24,SO,F,6-8,215.0,"Cedar Rapids, IA",DME Sports Academy,,203.2,97.5,9.7,4.3,1.1,iowa
+Patrick McCaffery,22,SO,F,6-9,200.0,"Iowa City, IA",Iowa City West (IA),69 (2019),205.7,90.7,10.5,3.6,1.6,iowa
+Tony Perkins,11,SO,G,6-4,210.0,"Indianapolis, IN",Lawrence North HS,,193.0,95.3,7.4,2.4,1.6,iowa
+Filip Rebraca,0,SR,F,6-9,222.0,"Sombor, Serbia",Williston Northampton (MA),,205.7,100.7,5.8,5.6,0.7,iowa
+Payton Sandfort,20,FR,G,6-7,215.0,"Waukee, IA",Waukee HS,,200.7,97.5,5.0,1.9,0.6,iowa
+Joe Toussaint,2,JR,G,6-0,190.0,"Bronx, NY",Cardinal Hayes (NY),,182.9,86.2,4.3,1.7,3.2,iowa
+Ahron Ulis,4,SO,G,6-3,190.0,"Chicago, IL",Marian Catholic HS,,190.5,86.2,3.1,2.0,2.1,iowa
+Connor McCaffery,30,SR,G,6-5,205.0,"Iowa City, IA",West High School,,195.6,93.0,2.5,2.5,1.9,iowa
+Austin Ash,13,SR,G,6-3,179.0,"Cedar Rapids, IA",Mount Vernon HS,,190.5,81.2,2.9,0.6,0.6,iowa
+Josh Ogundele,23,SO,F,6-10,285.0,"London, United Kingdom",Worcester Academy,,208.3,129.3,1.5,1.3,0.0,iowa
+Riley Mulvey,44,FR,C,6-11,245.0,"Rotterdam, NY",Albany Academy (NY); St. Thomas More (CT),,210.8,111.1,0.9,0.9,0.1,iowa
+Luc Laketa,25,FR,G,6-4,180.0,"Concord, MI",Hanover-Horton (MI),,193.0,81.6,0.8,0.2,0.1,iowa
+Jaden Ivey,23,SO,G,6-4,200.0,"South Bend, IN",La Lumiere Prep HS,87 (2020),193.0,90.7,17.3,4.9,3.1,purdue
+Zach Edey,15,SO,C,7-4,285.0,"Toronto, Canada",IMG Academy,,223.5,129.3,14.4,7.7,1.2,purdue
+Trevion Williams,50,SR,F,6-10,265.0,"Chicago, IL",Henry Ford Academy,,208.3,120.2,12.0,7.4,3.0,purdue
+Sasha Stefanovic,55,SR,G,6-5,200.0,"Crown Point, IN",Crown Point HS,,195.6,90.7,10.4,2.5,3.0,purdue
+Eric Hunter,2,SR,G,6-4,170.0,"Indianapolis, IN",Tindley Prep,,193.0,77.1,6.2,2.1,2.0,purdue
+Mason Gillis,0,SO,F,6-6,230.0,"New Castle, IN",New Castle (IN),,198.1,104.3,6.4,4.8,1.1,purdue
+Isaiah Thompson,11,JR,G,6-1,160.0,"Zionsville, IN",Zionsville Community (IN),,185.4,72.6,4.2,1.0,0.9,purdue
+Caleb Furst,3,FR,F,6-10,215.0,"Fort Wayne, IN",Blackhawk Christian HS,62 (2021),208.3,97.5,4.1,3.2,0.4,purdue
+Brandon Newman,5,SO,G,6-5,195.0,"Valparaiso, IN",Valparaiso (IN),,195.6,88.5,4.6,1.9,0.6,purdue
+Ethan Morton,25,SO,G,6-6,215.0,"Butler, PA",Butler Area HS,85 (2020),198.1,97.5,2.4,1.4,1.4,purdue
+Carson Barrett,34,SO,G,6-5,215.0,"Lafayette, IN",Central Catholic HS,,195.6,97.5,0.4,0.7,0.1,purdue
+Matt Frost,21,JR,F,6-5,200.0,"Columbus, IN",Columbus East (OH),,195.6,90.7,0.4,0.3,0.0,purdue
+Chase Martin,22,SO,G,6-3,195.0,"Columbia, MO",Tolton HS,,190.5,88.5,0.3,0.3,0.1,purdue
+Jared Wulbrun,14,SR,G,5-10,170.0,"Stanford, CA",Palo Alto (CA),,177.8,77.1,0.2,0.1,0.0,purdue
+Bennedict Mathurin,0,SO,G,6-7,195.0,"MontrÃ©al, Canada",NBA Academy Latin America,91 (2020),200.7,88.5,17.7,5.6,2.5,arizona
+Azuolas Tubelis,10,SO,F,6-11,245.0,"Vilnius, Lithuania",Rytas Vilnius (Lithuania),,210.8,111.1,13.9,6.2,2.3,arizona
+Christian Koloko,35,JR,C,7-1,225.0,"Douala, Cameroon",Sierra Canyon HS,,215.9,102.1,12.6,7.3,1.4,arizona
+Kerr Kriisa,25,SO,G,6-3,180.0,"Tartu, Estonia",Å½algiris-2 Kaunas (Lithuania),96 (2020),190.5,81.6,9.7,2.5,4.7,arizona
+Dalen Terry,4,SO,G,6-7,195.0,"South Phoenix, AZ",Hillcrest Prep,48 (2020),200.7,88.5,8.0,4.8,3.9,arizona
+Pelle Larsson,3,SO,G,6-5,208.0,"Nacka, Sweden",Lulea (Sweden),,195.6,94.3,7.2,3.4,1.8,arizona
+Oumar Ballo,11,SO,C,7-0,260.0,"Koulikoro, Mali",Canterbury Academy (Spain),95 (2019),213.4,117.9,6.8,4.4,0.6,arizona
+Justin Kier,5,SR,G,6-4,190.0,"Grottoes, VA",Spotswood High School,,193.0,86.2,6.8,3.1,2.2,arizona
+Kim Aiken,24,JR,G,6-7,215.0,"Redlands, CA",East Valley HS,,200.7,97.5,5.0,3.4,2.0,arizona
+Adama Bal,2,FR,G,6-6,190.0,"Paris, France",Centre FÃ©dÃ©ral de Basket-ball (France),,198.1,86.2,1.5,0.4,0.4,arizona
+Shane Nowell,1,FR,G,6-6,210.0,"Seattle, WA",Eastside Catholic HS,78 (2021),198.1,95.3,0.8,0.8,0.3,arizona
+Jordan Mains,50,JR,F,6-6,200.0,"Scottsdale, AZ",Pinnacle HS,,198.1,90.7,0.7,0.8,0.0,arizona
+Tautvilas Tubelis,20,SO,F,6-7,225.0,"Vilnius, Lithuania",Rytas Vilnius (Lithuania),,200.7,102.1,0.3,0.0,0.0,arizona
+Grant Weitman,53,SO,G,6-4,205.0,"Tucson, AZ",Salpointe Catholic HS,,193.0,93.0,0.1,0.2,0.0,arizona
+Oscar Tshiebwe,34,JR,F,6-9,260.0,"Lubumbashi, Democratic Republic of the Congo",Kennedy Catholic HS,28 (2019),205.7,117.9,17.4,15.1,1.1,kentucky
+TyTy Washington,3,FR,G,6-3,197.0,"Phoenix, AZ",AZ Compass Prep (AZ),14 (2021),190.5,89.4,12.5,3.5,3.9,kentucky
+Kellan Grady,31,SR,G,6-5,205.0,"Boston, MA",Northfield Mount Hermon School,82 (2017),195.6,93.0,11.4,2.1,1.3,kentucky
+Keion Brooks,12,JR,F,6-7,205.0,"Fort Wayne, IN",La Lumiere School,24 (2019),200.7,93.0,10.8,4.4,1.0,kentucky
+Sahvir Wheeler,2,JR,G,5-10,180.0,"Houston, TX",Houston Christian HS,85 (2019),177.8,81.6,10.1,2.6,6.9,kentucky
+Davion Mintz,10,SR,G,6-3,196.0,"Charlotte, NC",North Mecklenburg High School,,190.5,88.9,8.5,2.2,1.8,kentucky
+Jacob Toppin,0,JR,F,6-9,194.0,"Ossining, NY",Woodstock Academy,,205.7,88.0,6.2,3.2,1.1,kentucky
+Daimion Collins,4,FR,F,6-9,202.0,"Atlanta, TX",Atlanta HS,12 (2021),205.7,91.6,2.9,2.0,0.1,kentucky
+Bryce Hopkins,23,FR,F,6-6,220.0,"Oak Park, IL",Fenwick (IL),33 (2021),198.1,99.8,2.1,1.4,0.3,kentucky
+Lance Ware,55,SO,F,6-9,223.0,"Camden, NJ",Camden HS,39 (2020),205.7,101.2,1.5,1.9,0.1,kentucky
+Dontaie Allen,11,SO,G,6-6,198.0,"Falmouth, KY",Pendleton County HS,92 (2019),198.1,89.8,2.2,1.2,0.3,kentucky
+Zan Payne,20,JR,G,6-4,215.0,"Lexington, KY",Lexington Catholic HS,,193.0,97.5,0.9,0.2,0.0,kentucky
+Brennan Canada,14,JR,F,6-6,198.0,"Mount Sterling, KY",George Rogers Clark HS,,198.1,89.8,0.7,0.1,0.1,kentucky
+Kareem Watkins,25,SO,G,5-8,145.0,"Camden, NJ",Kingsway (NJ),,172.7,65.8,0.0,0.3,0.2,kentucky
+James Akinjo,11,JR,G,6-1,185.0,"Oakland, CA",Salesian College Preparatory,89 (2018),185.4,83.9,13.5,2.8,5.8,baylor
+Adam Flagler,10,JR,G,6-3,180.0,"Duluth, GA",Duluth HS,,190.5,81.6,13.8,2.2,3.0,baylor
+Kendall Brown,2,FR,G,6-8,205.0,"Cottage Grove, MN",Sunrise Christian Academy,10 (2021),203.2,93.0,9.7,4.9,1.9,baylor
+Matthew Mayer,24,SR,G,6-9,225.0,"Austin, TX",Westlake HS,86 (2018),205.7,102.1,9.8,5.0,1.0,baylor
+Jeremy Sochan,1,FR,F,6-9,230.0,"Milton Keynes, United Kingdom",Orange Academy,90 (2021),205.7,104.3,9.2,6.4,1.8,baylor
+LJ Cryer,4,SO,G,6-1,185.0,"Katy, TX",Morton Ranch HS,83 (2020),185.4,83.9,13.5,1.5,1.7,baylor
+Flo Thamba,0,SR,F,6-10,245.0,"Kinshasa, Democratic Republic of the Congo",Mountain Mission School,,208.3,111.1,6.2,5.6,0.3,baylor
+Jonathan Tchamwa Tchatchoua,23,JR,F,6-8,245.0,"Douala, Cameroon",NBA Global Academy - Australia,,203.2,111.1,8.4,6.8,0.7,baylor
+Dale Bonner,3,SO,G,6-2,170.0,"Shaker Heights, OH",Shaker Heights (OH),,188.0,77.1,3.1,1.2,1.5,baylor
+Jordan Turner,5,SO,G,6-8,195.0,"Houston, TX",Sunrise Christian (KS),,203.2,88.5,2.0,1.5,0.4,baylor
+Zach Loveday,32,SO,F,7-0,215.0,"Gallipolis, OH",Huntington (W. Va.) Prep,,213.4,97.5,1.0,1.1,0.1,baylor
+Mitchell Paul,14,SR,G,6-0,175.0,"Leawood, KS",Kansas City Christian School,,182.9,79.4,1.1,0.6,0.0,baylor
+Dain Dainja,42,FR,F,6-9,270.0,"Brooklyn Park, MN",Park Center HS,70 (2020),205.7,122.5,2.0,1.0,0.0,baylor
+Kijana Love,21,,G,6-1,180.0,"Cibolo, TX",Steele High School,,185.4,81.6,0.5,0.3,0.2,baylor
+Austin Sacks,20,SO,F,6-6,195.0,"Encino, CA",Oakwood Secondary School,,198.1,88.5,0.0,0.0,0.0,baylor
+Johnny Davis,1,SO,G,6-5,196.0,"La Crosse, WI",La Crosse Central HS,,195.6,88.9,19.7,8.2,2.1,wisconsin
+Brad Davison,34,SR,G,6-4,202.0,"Maple Grove, MN",Maple Grove Senior High School,,193.0,91.6,14.1,4.0,2.1,wisconsin
+Tyler Wahl,5,JR,F,6-9,220.0,"Lakeville, MN",North HS,,205.7,99.8,11.4,5.9,1.5,wisconsin
+Steven Crowl,22,SO,F,7-0,217.0,"Eagan, MN",Eastview HS,,213.4,98.4,8.8,4.4,1.5,wisconsin
+Chucky Hepburn,23,FR,G,6-2,211.0,"Omaha, NE",Bellevue West (NE),,188.0,95.7,7.9,2.1,2.3,wisconsin
+Chris Vogt,33,SR,C,7-1,260.0,"Mayfield, KY",Graves County High School,,215.9,117.9,2.9,3.1,0.6,wisconsin
+Lorne Bowman,11,FR,G,6-2,180.0,"Detroit, MI",St. Mary's HS,,188.0,81.6,3.0,1.1,0.5,wisconsin
+Ben Carlson,20,SO,F,6-9,218.0,"Woodbury, MN",East Ridge HS,,205.7,98.9,1.6,2.0,0.1,wisconsin
+Jahcobi Neath,0,JR,G,6-3,200.0,"Toronto, Canada",Crestwood Prep,,190.5,90.7,1.6,1.5,0.3,wisconsin
+Jordan Davis,2,SO,G,6-4,202.0,"La Crosse, WI",La Crosse Central HS,,193.0,91.6,1.3,0.9,0.1,wisconsin
+Carter Gilmore,14,SO,F,6-7,215.0,"Hartland, WI",Arrowhead HS,,200.7,97.5,0.9,1.0,0.4,wisconsin
+Markus Ilver,35,FR,F,6-8,219.0,"Tallinn, Estonia",Western Reserve Academy,,203.2,99.3,0.6,0.5,0.0,wisconsin
+Isaac Lindsey,10,SO,G,6-4,190.0,"Mineral Point, WI",Mineral Point HS,,193.0,86.2,0.5,0.0,0.0,wisconsin
+Carter Higginbottom,4,JR,G,6-0,188.0,"Chicago, IL",St. Ignatius HS,,182.9,85.3,0.0,0.0,0.0,wisconsin
+Justin Taphorn,13,SO,G,6-5,198.0,"Pekin, IL",Pekin HS,,195.6,89.8,0.0,0.0,0.0,wisconsin
+Jalen Williams,24,JR,G,6-6,190.0,"Gilbert, AZ",Perry HS,,198.1,86.2,18.0,4.4,4.2,santa-clara
+Keshawn Justice,14,SR,F,6-7,220.0,"Madison, WI",Madison East HS,,200.7,99.8,13.0,6.7,2.2,santa-clara
+Josip Vrankic,13,SR,F,6-9,215.0,"Toronto, Canada",Wasatch Academy,,205.7,97.5,15.6,5.7,3.1,santa-clara
+PJ Pipes,2,SR,G,6-2,190.0,"Woodridge, IL",Lemont High School,,188.0,86.2,12.0,2.7,2.9,santa-clara
+Parker Braun,23,JR,F,6-8,217.0,"Overland Park, KS",Blue Valley Northwest HS,,203.2,98.4,6.9,5.3,1.6,santa-clara
+Carlos Stewart,1,FR,G,6-1,185.0,"Baton Rouge, LA",The Dunham HS,,185.4,83.9,5.4,1.5,0.8,santa-clara
+Giordan Williams,4,JR,G,6-3,165.0,"Long Beach, CA",Long Beach Poly HS,,190.5,74.8,5.1,1.5,0.5,santa-clara
+Jaden Bediako,12,JR,C,6-10,240.0,"Brampton, Canada",Ridley (ON),,208.3,108.9,4.1,4.9,0.6,santa-clara
+Jacob Holt,15,,F,6-9,215.0,"Ladner, Canada",Vancouver College (BC),,205.7,97.5,1.7,1.8,0.0,santa-clara
+Camaron Tongue,21,FR,F,6-7,220.0,"Medfield, MA",The Rivers HS,,200.7,99.8,1.6,1.7,0.3,santa-clara
+Miguel Tomley,10,SO,G,6-3,185.0,"Surrey, Canada",RISE Prep,,190.5,83.9,1.8,0.8,0.2,santa-clara
+Eli Barry,20,JR,G,6-1,165.0,"Atlanta, GA",The Westminister Schools,,185.4,74.8,1.0,0.5,0.0,santa-clara
+Max Dorward,22,SR,G,6-5,170.0,"Palo Alto, CA",Palo Alto (CA),,195.6,77.1,0.0,0.0,0.3,santa-clara
+Jalen Duren,2,FR,C,6-11,250.0,"Sharon Hill, PA",Montverde Academy,,210.8,113.4,12.0,8.1,1.3,memphis
+Lester Quinones,11,JR,G,6-5,205.0,"Brentwood, NY",IMG Academy,60 (2019),195.6,93.0,10.0,3.5,1.3,memphis
+Tyler Harris,14,SR,G,5-9,150.0,"Memphis, TN",Cordova HS,80 (2018),175.3,68.0,8.8,1.2,1.7,memphis
+Deandre Williams,12,SR,F,6-9,190.0,"Houston, TX",Klein Forest HS,,205.7,86.2,11.1,5.8,1.7,memphis
+Landers Nolley,3,JR,G,6-7,220.0,"Fairburn, GA",Langston Hughes HS,72 (2018),200.7,99.8,9.8,3.9,2.8,memphis
+Josh Minott,20,FR,G,6-8,205.0,"Boca Raton, FL",St. Andrew's School,44 (2021),203.2,93.0,6.6,3.8,0.9,memphis
+Emoni Bates,1,FR,F,6-9,190.0,"Ypsilanti, MI",YPSI Prep Academy,,205.7,86.2,9.7,3.3,1.3,memphis
+Alex Lomax,10,SR,G,6-0,190.0,"Memphis, TN",East HS,,182.9,86.2,6.1,3.1,4.1,memphis
+Malcolm Dandridge,23,JR,C,6-9,232.0,"Memphis, TN",East HS,,205.7,105.2,4.4,2.6,0.7,memphis
+Earl Timberlake,0,SO,G,6-6,215.0,"Washington, DC",DeMatha Catholic HS,30 (2020),198.1,97.5,4.7,3.4,1.6,memphis
+Jayden Hardaway,25,JR,G,6-5,195.0,"Memphis, TN",IMG Academy,,195.6,88.5,2.9,1.0,0.6,memphis
+Chandler Lawson,4,JR,F,6-8,205.0,"Memphis, TN",Wooddale HS,94 (2019),203.2,93.0,1.6,2.2,0.5,memphis
+Tadarius Jacobs,31,FR,G,6-1,170.0,"Memphis, TN",Bartlett HS,,185.4,77.1,0.7,0.3,0.0,memphis
+John Camden,15,FR,F,6-8,208.0,"Downingtown, PA",Brewster Academy,,203.2,94.3,0.0,1.0,0.0,memphis
+Conor Glennon,30,SO,G,5-10,165.0,"Chicago, IL",Brother Rice HS,,177.8,74.8,0.0,0.0,0.1,memphis
+Ochai Agbaji,30,SR,G,6-5,210.0,"Kansas City, MO",Oak Park HS,,195.6,95.3,18.8,5.1,1.6,kansas
+Christian Braun,2,JR,G,6-6,205.0,"Overland Park, KS",Blue Valley Northwest HS,,198.1,93.0,14.1,6.5,2.8,kansas
+David McCormack,33,SR,F,6-10,265.0,"Norfolk, VA",Oak Hill Academy,30 (2018),208.3,120.2,10.6,7.0,0.9,kansas
+Jalen Wilson,10,SO,F,6-8,215.0,"Denton, TX",John H. Guyer HS,51 (2019),203.2,97.5,11.1,7.4,1.8,kansas
+Remy Martin,11,SR,G,6-0,175.0,"Chatsworth, CA",Sierra Canyon School,,182.9,79.4,8.6,3.0,2.5,kansas
+Dajuan Harris,3,JR,G,6-1,160.0,"Columbia, MO",Rock Bridge HS,,185.4,72.6,5.4,1.4,4.2,kansas
+Mitch Lightfoot,44,SR,F,6-8,225.0,"Gilbert, AZ",Ironwood Ridge High School,,203.2,102.1,4.6,2.8,0.4,kansas
+Jalen Coleman-Lands,55,SR,G,6-4,187.0,"Indianapolis, IN",La Lumiere HS,38 (2015),193.0,84.8,3.7,0.7,0.3,kansas
+Joseph Yesufu,1,SO,G,6-0,180.0,"Bolingbrook, IL",Bolingbrook HS,,182.9,81.6,2.1,0.9,1.0,kansas
+Zach Clemence,21,FR,F,6-10,225.0,"San Antonio, TX",Sunrise Christian Academy,43 (2021),208.3,102.1,2.1,1.8,0.4,kansas
+KJ Adams,24,FR,F,6-7,225.0,"Austin, TX",Westlake HS,66 (2021),200.7,102.1,1.0,0.8,0.3,kansas
+Bobby Pettiford,0,FR,G,6-1,190.0,"Durham, NC",South Granville HS,98 (2021),185.4,86.2,1.4,0.9,0.9,kansas
+Chris Teahan,12,SR,G,6-4,195.0,"Leawood, KS",Rockhurst High School,,193.0,88.5,0.7,0.2,0.1,kansas
+Michael Jankovich,20,JR,G,6-5,185.0,"Dallas, TX",Northfield Mount Hermon School (MA),,195.6,83.9,0.6,0.2,0.0,kansas
+Tari Eason,13,SO,F,6-8,215.0,"Seattle, WA",Garfield HS,93 (2020),203.2,97.5,16.9,6.6,1.0,louisiana-state
+Darius Days,4,SR,F,6-7,245.0,"Raleigh, FL",IMG Academy,59 (2018),200.7,111.1,13.7,7.8,0.9,louisiana-state
+Brandon Murray,0,FR,G,6-5,214.0,"Baltimore, MD",IMG Academy,89 (2021),195.6,97.1,10.0,3.0,1.9,louisiana-state
+Eric Gaines,2,SO,G,6-2,155.0,"Lithonia, GA",Lithonia HS,,188.0,70.3,9.0,3.3,2.9,louisiana-state
+Xavier Pinson,1,SR,G,6-2,170.0,"Chicago, IL",Simeon Academy,,188.0,77.1,9.8,2.4,4.8,louisiana-state
+Efton Reid,15,FR,C,6-11,238.0,"Richmond, VA",IMG Academy,24 (2021),210.8,108.0,6.3,4.3,0.5,louisiana-state
+Mwani Wilkinson,5,SO,F,6-5,215.0,"Las Vegas, NV",Bishop Gorman HS,68 (2020),195.6,97.5,4.0,3.0,0.9,louisiana-state
+Alex Fudge,3,FR,F,6-8,185.0,"Jacksonville, FL",Robert E. Lee HS,,203.2,83.9,3.3,3.2,0.3,louisiana-state
+Shareef O'Neal,24,JR,F,6-10,225.0,"Los Angeles, CA",Crossroads School,38 (2018),208.3,102.1,2.9,2.1,0.1,louisiana-state
+Justice Williams,11,FR,G,6-3,175.0,"Philadelphia, PA",Roman Catholic (PA); Monteverde Academy (FL),,190.5,79.4,1.7,0.8,0.7,louisiana-state
+Parker Edwards,30,JR,G,6-2,185.0,"Mandeville, LA",St. Paul's HS,,188.0,83.9,1.6,0.1,0.1,louisiana-state
+Bradley Ezewiro,21,FR,F,6-8,246.0,"Torrance, CA",Oak Hill Academy,,203.2,111.6,1.6,0.9,0.0,louisiana-state
+Jerrell Colbert,20,FR,C,6-10,216.0,"Houston, TX",Houston HS,82 (2021),208.3,98.0,0.5,1.3,0.5,louisiana-state
+Adam Benhayoune,25,FR,F,6-5,230.0,"Helotes, TX",Sandra Day O'Connor HS,,195.6,104.3,0.0,0.0,0.0,louisiana-state
+Brandon Egemo,10,SO,G,6-0,175.0,"Los Angeles, CA",University HS,,182.9,79.4,0.0,0.0,0.0,louisiana-state
+Spencer Mays,22,JR,G,6-3,196.0,"Baton Rouge, LA",,,190.5,88.9,0.0,0.0,0.0,louisiana-state
+Alondes Williams,31,SR,G,6-5,201.0,"Milwaukee, WI",Riverside HS,,195.6,91.2,18.5,6.4,5.2,wake-forest
+Jake Laravia,0,JR,G,6-9,228.0,"Indianapolis, IN",Lawrence Central HS,,205.7,103.4,14.6,6.6,3.7,wake-forest
+Daivien Williamson,4,SR,G,6-2,170.0,"Winston-Salem, NC",Winston-Salem Prep,,188.0,77.1,11.8,2.5,1.2,wake-forest
+Dallas Walton,13,SR,F,7-0,235.0,"Arvada, CO",Ralston Valley High School,,213.4,106.6,9.3,5.2,1.1,wake-forest
+Isaiah Mucius,1,SR,F,6-8,200.0,"East Patchogue, NY",Brewster Academy,92 (2018),203.2,90.7,9.5,3.2,0.8,wake-forest
+Khadim Sy,20,SR,F,6-10,238.0,"Dakar, Senegal",Oak Hill Academy (VA),,208.3,108.0,6.0,4.6,0.5,wake-forest
+Cameron Hildreth,2,FR,G,6-4,195.0,"Worthing, United Kingdom",Barking Abbey (England),,193.0,88.5,3.9,2.9,1.2,wake-forest
+Damari Monsanto,30,SO,F,6-6,225.0,"Pembroke Pines, FL",Western HS,,198.1,102.1,7.3,3.4,0.8,wake-forest
+Carter Whitt,11,SO,G,6-4,180.0,"Raleigh, NC",Leesville Road HS,,193.0,81.6,1.7,1.6,1.5,wake-forest
+Matthew Marsh,33,,F,7-1,250.0,"Cornwall, United Kingdom",FC Barcelona (Spain),,215.9,113.4,2.8,1.6,0.0,wake-forest
+Robert McCray,25,FR,G,6-4,185.0,"Columbia, SC",AC Flora HS,,193.0,83.9,1.9,0.6,0.2,wake-forest
+Miles Lester,55,SR,G,6-0,180.0,"Wichita, KS",Wilbraham & Monson Academy,,182.9,81.6,0.9,0.4,0.1,wake-forest
+Grant Van Beveren,52,JR,F,6-6,215.0,"Alpharetta, GA",Chattahoochee HS,,198.1,97.5,1.5,1.0,0.0,wake-forest
+RJ Kennah,40,,G,6-5,180.0,"Parker, CO",Kent Denver HS,,195.6,81.6,1.0,0.0,0.0,wake-forest
+Lucas Taylor,23,FR,G,6-5,195.0,"Wake Forrest, NC",Heritage HS,,195.6,88.5,0.1,0.1,0.2,wake-forest
+Kevin Dunn,51,,G,6-2,205.0,"Winston-Salem, NC",Choate Rosemary Hall HS,,188.0,93.0,0.0,0.5,0.0,wake-forest
+Tariq Ingraham,10,SO,F,6-9,255.0,"Philadelphia, PA",Bonner-Prendergast HS,,205.7,115.7,0.0,0.0,0.0,wake-forest
+Anthony Mathis,45,SR,G,6-1,185.0,"Louisville, KY",Kentucky Country Day School,,185.4,83.9,0.0,0.3,0.0,wake-forest
+E.J. Liddell,32,JR,F,6-7,240.0,"Belleville, IL",Belleville West (IL),41 (2019),200.7,108.9,19.4,7.9,2.5,ohio-state
+Malaki Branham,22,FR,G,6-5,180.0,"Columbus, OH",St. Vincent HS,32 (2021),195.6,81.6,13.7,3.6,2.0,ohio-state
+Zed Key,23,SO,F,6-8,245.0,"Bay Shore, NY",Long Island Lutheran HS,,203.2,111.1,7.8,5.6,0.5,ohio-state
+Jamari Wheeler,55,SR,G,6-1,170.0,"Live Oak, FL",The Rock High School,,185.4,77.1,7.1,3.2,2.9,ohio-state
+Kyle Young,25,SR,F,6-8,225.0,"Canton, OH",Jackson High School,,203.2,102.1,8.2,5.0,1.2,ohio-state
+Justin Ahrens,10,SR,F,6-6,195.0,"Versailles, OH",Versailles HS,,198.1,88.5,4.8,2.3,0.8,ohio-state
+Cedric Russell,2,SR,G,6-2,190.0,"Alexandria, LA",Peabody Magnet High School,,188.0,86.2,4.2,0.6,0.4,ohio-state
+Meechie Johnson,0,FR,G,6-2,172.0,"Cleveland, OH",Garfield Heights HS,,188.0,78.0,4.4,1.5,1.2,ohio-state
+Eugene Brown,3,SO,G,6-6,195.0,"Conyers, GA",Southwest Dekalb HS,,198.1,88.5,3.5,2.4,0.5,ohio-state
+Joey Brunk,50,SR,F,6-11,255.0,"Indianapolis, IN",Southport High School,,210.8,115.7,2.4,1.6,0.2,ohio-state
+Jimmy Sotos,1,SR,G,6-3,200.0,"Elk Grove Village, IL",James B. Conant High School,,190.5,90.7,1.8,0.7,1.3,ohio-state
+Justice Sueing,14,SR,F,6-7,215.0,"Honolulu, HI",Mater Dei High School,,200.7,97.5,6.0,3.5,0.0,ohio-state
+Harrison Hookfin,42,SR,F,6-6,195.0,"Lebanon, OH",Lebanon High School (OH),,198.1,88.5,0.3,0.3,0.3,ohio-state
+David Roddy,21,JR,G,6-5,252.0,"Minneapolis, MN",Breck School,,195.6,114.3,19.2,7.5,2.9,colorado-state
+Isaiah Stevens,4,JR,G,6-0,180.0,"Allen, TX",Allen HS,,182.9,81.6,14.7,3.2,4.7,colorado-state
+John Tonje,1,JR,G,6-5,222.0,"Omaha, NE",Omaha Central HS,,195.6,100.7,9.1,3.0,0.9,colorado-state
+Kendle Moore,3,SR,G,5-10,151.0,"Danville, IL",Danville HS,,177.8,68.5,6.5,2.6,1.9,colorado-state
+Dischon Thomas,11,JR,F,6-9,232.0,"Durham, NC",Hillcrest Prep,,205.7,105.2,5.7,3.1,1.0,colorado-state
+Chandler Jacobs,13,SR,G,6-3,185.0,"Missouri City, TX",Elkins (TX),,190.5,83.9,5.7,4.1,0.7,colorado-state
+James Moors,10,SO,F,6-10,239.0,"Auckland, New Zealand",Westlake Boys (New Zealand),,208.3,108.4,4.0,2.5,0.7,colorado-state
+Jalen Lake,15,FR,G,6-4,185.0,"Waxahachie, TX",Waxahachie HS,,193.0,83.9,3.6,1.1,0.5,colorado-state
+Isaiah Rivera,23,SO,G,6-5,209.0,"Geneseo, IL",Geneseo HS,,195.6,94.8,3.4,1.5,0.5,colorado-state
+Adam Thistlewood,31,SR,F,6-6,212.0,"Golden, CO",Golden HS,,198.1,96.2,2.4,1.8,0.6,colorado-state
+Baylor Hebb,5,SO,G,6-2,170.0,"Colleyville, TX",Heritage HS,,188.0,77.1,0.5,0.1,0.2,colorado-state
+Nick Bassett,22,JR,F,6-4,193.0,"Colorado Springs, CO",Cheyenne Mountain (CO),,193.0,87.5,0.0,0.0,0.0,colorado-state
+Jacob Jennissen,35,SO,C,6-11,232.0,"Sauk Centre, MN",Sauk Centre Secondary HS,,210.8,105.2,0.0,0.2,0.0,colorado-state
+Trace Young,0,SO,G,6-3,176.0,"Austin, TX",Dripping Springs HS,,190.5,79.8,0.0,0.0,0.0,colorado-state
+Blake Wesley,0,FR,G,6-5,185.0,"South Bend, IN",Riley HS,,195.6,83.9,14.4,3.7,2.4,notre-dame
+Dane Goodwin,23,SR,G,6-6,200.0,"Upper Arlington, OH",Upper Arlington HS,,198.1,90.7,13.6,4.7,1.3,notre-dame
+Paul Atkinson,20,SR,F,6-10,220.0,"West Palm Beach, FL",Westminster Academy,,208.3,99.8,12.5,6.9,1.7,notre-dame
+Cormac Ryan,5,SR,G,6-5,195.0,"New York, NY",Milton Academy,60 (2018),195.6,88.5,9.2,4.8,1.9,notre-dame
+Nate Laszewski,14,SR,F,6-10,227.0,"Jupiter, FL",Northfield Mount Herman (MA),61 (2018),208.3,103.0,9.3,6.5,0.8,notre-dame
+Prentiss Hubb,3,SR,G,6-3,175.0,"Upper Marlboro, MD",Gonzaga (DC),92 (2018),190.5,79.4,8.9,3.2,4.0,notre-dame
+Trey Wertz,2,SR,G,6-5,195.0,"Charlotte, NC",Providence Day HS,,195.6,88.5,4.0,1.8,2.0,notre-dame
+J.R. Konieczny,1,FR,G,6-6,195.0,"South Bend, IN",St. Joseph (IN),,198.1,88.5,1.6,0.1,0.1,notre-dame
+Elijah Taylor,22,SO,F,6-8,231.0,"Philadelphia, PA",Imhotep Charter HS,,203.2,104.8,2.7,0.7,0.0,notre-dame
+Elijah Morgan,31,JR,G,6-1,165.0,"New Orleans, LA",Jesuit HS,,185.4,74.8,1.0,0.5,0.7,notre-dame
+Tony Sanders,12,SO,G,6-7,202.0,"Miami, FL",Gulliver Prep,,200.7,91.6,1.0,0.2,0.0,notre-dame
+Matt Zona,25,SO,F,6-9,243.0,"Blauvelt, NY",Bergen Catholic (NJ),,205.7,110.2,0.8,0.9,0.0,notre-dame
+Robby Carmody,24,JR,G,6-4,215.0,"Mars, PA",Mars Area HS,92 (2018),193.0,97.5,0.0,0.0,0.0,notre-dame
+Jaime Jaquez,24,JR,G,6-6,220.0,"Camarillo, CA",Camarillo HS,96 (2019),198.1,99.8,13.9,5.7,2.3,ucla
+Johnny Juzang,3,JR,G,6-6,210.0,"Los Angeles, CA",Harvard-Westlake School,34 (2019),198.1,95.3,15.6,4.7,1.8,ucla
+Jules Bernard,1,SR,G,6-6,205.0,"Los Angeles, CA",Windward School,45 (2018),198.1,93.0,12.8,4.7,1.7,ucla
+Tyger Campbell,10,JR,G,5-11,180.0,"Cedar Rapids, IA",La Lumiere School,,180.3,81.6,11.9,2.5,4.3,ucla
+Jaylen Clark,0,SO,G,6-5,195.0,"Riverside, CA",Etiwanda HS,84 (2020),195.6,88.5,6.7,3.8,1.0,ucla
+Cody Riley,2,SR,F,6-9,225.0,"Kansas City, KS",Sierra Canyon HS,44 (2017),205.7,102.1,7.3,3.9,1.0,ucla
+David Singleton,34,SR,G,6-4,210.0,"Los Angeles, CA",Bishop Montgomery HS,83 (2018),193.0,95.3,4.8,1.5,0.9,ucla
+Myles Johnson,15,SR,F,6-11,255.0,"Long Beach, CA",Long Beach Polytechnic HS,,210.8,115.7,3.6,5.4,0.7,ucla
+Peyton Watson,23,FR,G,6-8,200.0,"Long Beach, CA",Long beach Poly HS,8 (2021),203.2,90.7,3.3,2.9,0.8,ucla
+Jake Kyman,13,JR,G,6-6,220.0,"Aliso Viejo, CA",Santa Margarita Catholic HS,,198.1,99.8,2.4,1.0,0.5,ucla
+Kenneth Nwuba,14,JR,F,6-9,255.0,"Lagos, Nigeria",Huntington Prep,,205.7,115.7,1.2,0.9,0.2,ucla
+Russell Stong,43,SR,G,6-3,190.0,"Northridge, CA",Crespi HS,,190.5,86.2,0.3,0.3,0.1,ucla
+Logan Cremonesi,20,SO,F,6-7,210.0,"Oceanside, CA",Mater Dei HS,,200.7,95.3,0.0,0.0,0.0,ucla
+Hunter Dickinson,1,SO,C,7-1,255.0,"Alexandria, VA",DeMatha Catholic HS,37 (2020),215.9,115.7,18.6,8.6,2.3,michigan
+Eli Brooks,55,SR,G,6-1,185.0,"Spring Grove, PA",Spring Grove High School,,185.4,83.9,12.8,3.7,2.9,michigan
+Caleb Houstan,22,FR,G,6-8,205.0,"Mississauga, Canada",Montverde Academy,6 (2021),203.2,93.0,10.1,4.0,1.4,michigan
+DeVante Jones,12,SR,G,6-1,200.0,"New Orleans, LA",St. Augustine HS,,185.4,90.7,10.3,4.5,4.6,michigan
+Moussa Diabate,14,FR,F,6-11,210.0,"Paris, France",IMG Academy,11 (2021),210.8,95.3,9.0,6.0,0.8,michigan
+Terrance Williams,5,SO,F,6-7,240.0,"Clinton, MD",Gonzaga College HS,95 (2020),200.7,108.9,4.7,2.4,0.5,michigan
+Brandon Johns,23,SR,F,6-8,240.0,"East Lansing, MI",East Lansing HS,67 (2018),203.2,108.9,3.2,2.0,0.4,michigan
+Frankie Collins,10,FR,G,6-1,185.0,"Henderson, NV",Coronado HS,41 (2021),185.4,83.9,2.8,1.7,1.4,michigan
+Kobe Bufkin,2,FR,G,6-4,175.0,"Grand Rapids, MI",Grand Rapids Christian HS,40 (2021),193.0,79.4,3.0,1.1,0.3,michigan
+Jace Howard,25,SO,G,6-7,210.0,"Miami, FL",University School,,200.7,95.3,1.1,0.5,0.2,michigan
+Jaron Faulds,44,SR,F,6-10,240.0,"Holt, MI",Holt High School,,208.3,108.9,0.9,0.7,0.1,michigan
+Zeb Jackson,3,SO,G,6-5,180.0,"Toledo, OH",Maumee Valley (OH),77 (2020),195.6,81.6,3.3,1.5,0.5,michigan
+Adrien Nunez,0,SR,G,6-6,210.0,"Brooklyn, NY",St. Thomas More Prep,,198.1,95.3,0.8,0.2,0.0,michigan
+Isaiah Barnes,11,FR,G,6-7,185.0,"Chicago, IL",Simeon Career Academy,,200.7,83.9,0.0,0.5,0.0,michigan
+Ian Burns,13,,G,6-6,200.0,"Winnetka, IL",New Trier HS,,198.1,90.7,0.0,0.0,0.5,michigan
+JD Notae,1,SR,G,6-1,195.0,"Covington, GA",Newton County High School,,185.4,88.5,18.3,4.6,3.7,arkansas
+Stanley Umude,0,SR,G,6-6,210.0,"San Antonio, TX",Warren High School,,198.1,95.3,11.9,4.6,1.1,arkansas
+Jaylin Williams,10,SO,F,6-10,245.0,"Fort Smith, AR",Fort Smith Northside HS,,208.3,111.1,10.9,9.8,2.6,arkansas
+Au'Diese Toney,5,SR,G,6-6,210.0,"Huntsville, AL",Trinity Christian Academy,,198.1,95.3,10.5,5.2,0.8,arkansas
+Davonte Davis,4,SO,G,6-3,180.0,"Jacksonville, AR",Jacksonville HS,,190.5,81.6,8.3,3.7,2.8,arkansas
+Chris Lykes,11,SR,G,5-7,160.0,"Mitchellville, MD",Gonzaga College High School,65 (2017),170.2,72.6,7.6,1.0,1.5,arkansas
+Trey Wade,3,SR,F,6-6,221.0,"Marietta, GA",South Cobb High School,,198.1,100.2,3.6,2.6,0.6,arkansas
+Kamani Johnson,20,JR,F,6-7,215.0,"Brooklyn, NY",Holy Spirit Prep,,200.7,97.5,2.3,2.7,0.3,arkansas
+Connor Vanover,23,JR,F,7-3,247.0,"Little Rock, AR",Findlay Prep,,221.0,112.0,3.9,2.1,0.3,arkansas
+Jaxson Robinson,14,SO,G,6-7,193.0,"Ada, OK",Ada HS,82 (2020),200.7,87.5,3.4,1.3,0.4,arkansas
+Khalen Robinson,2,SO,G,6-0,175.0,"Little Rock, AR",Oak Hill Academy (Va.),62 (2020),182.9,79.4,1.5,0.4,0.7,arkansas
+Chance Moore,13,FR,G,6-5,195.0,"Brookhaven, GA",McEachern HS,88 (2021),195.6,88.5,1.0,0.6,0.0,arkansas
+Cade Arbogast,21,,G,6-3,170.0,"Concord, CA",De La Salle (CA),,190.5,77.1,0.0,0.8,0.3,arkansas
+Lawson Blake,45,,F,6-10,225.0,"Fayetteville, AR",Link Year Prep,,208.3,102.1,0.0,0.0,0.0,arkansas
+Gabe Brown,44,SR,F,6-7,210.0,"Ypsilanti, MI",Belleville HS,100 (2018),200.7,95.3,11.6,3.8,1.1,michigan-state
+Marcus Bingham,30,SR,F,6-11,225.0,"Grand Rapids, MI",Catholic Central HS,62 (2018),210.8,102.1,9.3,6.3,0.3,michigan-state
+Max Christie,5,FR,G,6-6,190.0,"Arlington Heights, IL",Rolling Meadows HS,17 (2021),198.1,86.2,9.3,3.5,1.5,michigan-state
+Malik Hall,25,JR,F,6-7,215.0,"Aurora, IL",Sunrise Christian Academy,55 (2019),200.7,97.5,8.9,4.6,1.1,michigan-state
+Tyson Walker,2,JR,G,6-0,162.0,"Westbury, NY",New Hampton School,,182.9,73.5,8.2,1.3,4.3,michigan-state
+Joey Hauser,10,SR,F,6-9,220.0,"Stevens Point, WI",Stevens Point (WI),57 (2018),205.7,99.8,7.3,5.3,1.7,michigan-state
+A.J. Hoggard,11,SO,G,6-3,220.0,"Coatesville, PA",Huntington Prep HS,70 (2020),190.5,99.8,7.0,2.3,4.8,michigan-state
+Julius Marble,34,JR,F,6-8,225.0,"Dallas, TX",Dallas Jesuit (TX),,203.2,102.1,6.4,3.3,0.3,michigan-state
+Jaden Akins,3,FR,G,6-4,180.0,"Farmington, MI",Sunrise Christian Academy,48 (2021),193.0,81.6,3.4,2.4,0.7,michigan-state
+Mady Sissoko,22,SO,C,6-9,235.0,"Bafoulabe, Mali",Wasatch Academy,34 (2020),205.7,106.6,1.1,1.0,0.0,michigan-state
+Pierre Brooks,1,FR,G,6-6,225.0,"Detroit, MI",Frederick Douglass Academy,56 (2021),198.1,102.1,0.9,0.5,0.2,michigan-state
+Keon Coleman,0,,F,6-4,210.0,"Opelousas, LA",,,193.0,95.3,0.8,0.2,0.0,michigan-state
+Maliq Carr,6,SO,G,6-5,245.0,"Southfield, MI",,,195.6,111.1,0.0,0.0,0.0,michigan-state
+Steven Izzo,13,JR,G,5-8,150.0,"East Lansing, MI",Lansing Catholic (MI),,172.7,68.0,0.0,0.0,0.0,michigan-state
+Michael Peterson,20,SR,G,6-7,205.0,"Rockford, MI",,,200.7,93.0,0.0,0.2,0.0,michigan-state
+Davis Smith,14,SO,G,6-1,185.0,"Atlanta, GA",Westminster HS,,185.4,83.9,0.0,0.1,0.1,michigan-state
+Kennedy Chandler,1,FR,G,6-0,172.0,"Memphis, TN",Sunrise Christian Academy,6 (2021),182.9,78.0,13.9,3.2,4.7,tennessee
+Santiago Vescovi,25,JR,G,6-3,188.0,"Montevideo, Uruguay",NBA Global Academy,,190.5,85.3,13.3,4.4,3.2,tennessee
+Josiah-Jordan James,30,JR,G,6-6,207.0,"Charleston, SC",Porter-Gaud School,20 (2019),198.1,93.9,10.3,6.0,1.7,tennessee
+Zakai Zeigler,5,FR,G,5-9,160.0,"Long Island, NY",Our Saviour Lutheran School,,175.3,72.6,8.8,1.9,2.7,tennessee
+John Fulkerson,10,SR,F,6-9,215.0,"Kingsport, TN",Briarcrest Christian School,,205.7,97.5,7.5,4.7,1.4,tennessee
+Olivier Nkamhoua,13,JR,F,6-8,223.0,"Helsinki, Finland",Bishop Walsh School,,203.2,101.2,8.6,5.6,1.2,tennessee
+Uros Plavsic,33,JR,C,7-0,262.0,"Ivanjica, Serbia",Hamilton Heights Christian Academy,,213.4,118.8,4.2,4.0,0.5,tennessee
+Brandon Huntley-Hatfield,2,FR,F,6-10,235.0,"Clarksville, TN",Scotland Campus Prep HS,23 (2021),208.3,106.6,3.9,2.9,0.3,tennessee
+Justin Powell,24,SO,G,6-6,205.0,"Prospect, KY",North Oldham HS,,198.1,93.0,3.7,1.5,0.7,tennessee
+Victor Bailey,12,SR,G,6-4,179.0,"Austin, TX",McNeil High School,,193.0,81.2,2.6,0.9,0.5,tennessee
+Jonas Aidoo,0,FR,F,6-11,230.0,"Durham, NC",Durham Voyager Academy (NC); Liberty Heights Athletic Institute (NC),39 (2021),210.8,104.3,2.1,2.2,0.2,tennessee
+Jahmai Mashack,15,FR,G,6-4,192.0,"Fontana, CA",Etiwanda HS,64 (2021),193.0,87.1,0.7,0.7,0.3,tennessee
+Quentin Diboundje,3,FR,G,6-5,206.0,"Montpellier, France",Monteverde Academy,,195.6,93.4,1.7,1.1,0.7,tennessee
+Brock Jancek,35,SR,F,6-8,222.0,"Knoxville, TN",Knoxville Catholic HS,,203.2,100.7,1.4,0.6,0.2,tennessee
+Kent Gilbert,21,SO,G,6-1,164.0,"Greenville, NC",D.H. Conley HS,,185.4,74.4,0.8,0.3,0.0,tennessee
+Isaiah Sulack,31,JR,G,6-5,170.0,"Knoxville, TN",Christian Academy (TN),,195.6,77.1,0.0,0.0,0.0,tennessee
+Bryce McGowens,5,FR,G,6-7,179.0,"Pendleton, SC",,25 (2021),200.7,81.2,16.8,5.2,1.4,nebraska
+Alonzo Verge,1,SR,G,6-2,170.0,"Chicago, IL",Thornton Township (IL),,188.0,77.1,14.5,4.5,5.5,nebraska
+Derrick Walker,13,JR,F,6-8,232.0,"Kansas City, MO",Raytown Senior High School,,203.2,105.2,9.5,6.0,1.4,nebraska
+C.J. Wilcher,0,SO,G,6-5,195.0,"Plainfield, NJ",Roselle Catholic HS,,195.6,88.5,8.1,2.3,0.8,nebraska
+Kobe Webster,10,SR,G,6-0,172.0,"Indianapolis, IN",Park Tudor School,,182.9,78.0,6.2,1.5,1.3,nebraska
+Lat Mayen,11,JR,F,6-9,205.0,"Adelaide, Australia",Australian Institute of Sport,,205.7,93.0,5.9,3.8,0.7,nebraska
+Keisei Tominaga,30,SO,G,6-2,178.0,"Moriyama Nagoya Aichi, Japan",Sakuragaoka Gakuen (Japan),,188.0,80.7,5.7,1.5,0.6,nebraska
+Trey McGowens,2,JR,G,6-4,191.0,"Pendleton, SC",Hargrave Military Academy,,193.0,86.6,6.8,4.1,1.5,nebraska
+Eduardo Andre,35,SO,F,6-11,228.0,"London, Azerbaijan",AZ Compass Prep (AZ),,210.8,103.4,3.1,3.2,0.3,nebraska
+Wilhelm Breidenbach,32,FR,F,6-10,227.0,"Rancho Santa Margarita, CA",Mater Dei (CA),98 (2021),208.3,103.0,3.7,2.7,0.6,nebraska
+Trevor Lakes,14,SR,F,6-8,215.0,"Lebanon, IN",Lebanon (IN),,203.2,97.5,1.5,0.9,0.3,nebraska
+Keon Edwards,23,FR,F,6-7,185.0,"Pasadena, TX",Hillcrest Prep,,200.7,83.9,0.5,0.7,0.1,nebraska
+Jackson Cronin,4,FR,G,6-1,187.0,"Great Neck, NY",Great Neck North (IL),,185.4,84.8,0.6,0.1,0.0,nebraska
+Chris McGraw,15,SO,G,6-0,170.0,"Columbus, OH",Bishop Watterson HS,,182.9,77.1,0.0,0.0,0.2,nebraska
+Ryan Rollins,5,SO,G,6-4,180.0,"Macomb, MI",Dakota HS,,193.0,81.6,18.9,6.0,3.6,toledo
+Setric Millner,4,JR,F,6-6,205.0,"Little Rock, AR",Grand Rapids Christian HS,,198.1,93.0,15.0,5.8,1.9,toledo
+JT Shumate,32,JR,F,6-7,210.0,"Newark, OH",Newark (OH),,200.7,95.3,15.0,6.1,1.8,toledo
+Rayj Dennis,10,JR,G,6-2,180.0,"Oswego, IL",Oswego East HS,,188.0,81.6,12.7,5.6,4.0,toledo
+Ra'Heim Moss,0,FR,G,6-4,205.0,"Springfield, OH",Springfield (OH),,193.0,93.0,8.8,5.7,2.7,toledo
+Keshaun Saunders,24,JR,G,6-5,190.0,"Brampton, Canada",Orangeville Prep,,195.6,86.2,3.5,1.4,0.4,toledo
+Kooper Jacobi,12,FR,F,6-6,200.0,"Sellersburg, IN",Silver Creek HS,,198.1,90.7,2.2,2.5,0.2,toledo
+Mihai Carcoana,13,FR,C,6-11,240.0,"Ludus, Romania",Elevation Prep,,210.8,108.9,2.0,2.0,0.1,toledo
+EJ Farmer,2,FR,G,6-4,170.0,"Cleveland, OH",Cleveland Heights HS,,193.0,77.1,1.6,1.1,0.3,toledo
+Elijah Wilson,3,FR,G,6-5,180.0,"Lithonia, GA",Carolina Basketball Academy,,195.6,81.6,1.3,1.1,0.2,toledo
+Jordan Burge,21,JR,G,6-3,,"Cleveland, OH",,,190.5,,1.0,0.8,0.0,toledo
+AJ Edu,15,JR,F,6-10,225.0,"Colchester, United Kingdom",South Gloucestershire & Stroud (England),,208.3,102.1,0.5,0.5,0.0,toledo
+Jamere Hill,1,SO,G,6-3,175.0,"Joliet, IL",Joliet West HS,,190.5,79.4,0.0,0.4,0.4,toledo
+Jaden Shackelford,5,JR,G,6-3,200.0,"Hesperia, CA",Hesperia HS,98 (2019),190.5,90.7,16.6,5.4,1.5,alabama
+Jahvon Quinerly,13,JR,G,6-1,175.0,"Hackensack, NJ",Hudson Catholic HS,29 (2018),185.4,79.4,13.8,3.0,4.2,alabama
+Keon Ellis,14,SR,G,6-6,170.0,"Eustis, FL",Leesburg (FL),,198.1,77.1,12.1,6.1,1.8,alabama
+JD Davison,3,FR,G,6-3,195.0,"Latohatchee, AL",Calhoun HS,9 (2021),190.5,88.5,8.5,4.8,4.3,alabama
+Noah Gurley,0,SR,F,6-8,210.0,"Fayetteville, GA",Fayette County HS,,203.2,95.3,6.8,3.5,0.6,alabama
+Charles Bediako,10,FR,C,7-0,225.0,"Brampton, Canada",IMG Academy,30 (2021),213.4,102.1,6.7,4.3,0.7,alabama
+Juwan Gary,4,SO,F,6-6,218.0,"Columbia, SC",West Charlotte HS,82 (2019),198.1,98.9,6.5,3.4,0.3,alabama
+Darius Miles,2,SO,F,6-6,185.0,"Washington, DC",Theodore Roosevelt HS,,198.1,83.9,5.8,3.3,0.9,alabama
+James Rojas,33,SR,F,6-8,220.0,"Jamestown, NY",Jamestown HS,,203.2,99.8,5.4,2.4,0.5,alabama
+Jusaun Holt,1,FR,G,6-6,190.0,"Tacoma, WA",St. Francis HS,96 (2021),198.1,86.2,0.7,1.6,0.2,alabama
+Keon Ambrose-Hylton,22,SO,F,6-8,210.0,"Toronto, Canada",Andrew's Osborne Academy,,203.2,95.3,1.0,0.8,0.4,alabama
+Tyler Barnes,15,SR,F,6-8,201.0,"Louisville, KY",St. Xavier High School,,203.2,91.2,1.8,0.3,0.5,alabama
+Britton Johnson,21,SR,G,6-4,183.0,"Mountain Brook, AL",Mountain Brook HS,,193.0,83.0,0.8,1.3,0.0,alabama
+Adam Cottrell,30,JR,G,6-3,200.0,"Flowery Branch, GA",Lakeview Academy,,190.5,90.7,0.0,0.0,0.5,alabama
+Delaney Heard,12,SO,G,6-3,198.0,"Atlanta, GA",Oak Hill Academy,,190.5,89.8,0.0,0.0,0.0,alabama
+Jaden Quinerly,24,SO,G,6-0,155.0,"Hackensack, NJ",Ramsey HS,,182.9,70.3,0.0,1.0,0.3,alabama
+Alex Tchikou,35,FR,F,6-11,225.0,"Paris, France",Dream City Christian HS,,210.8,102.1,0.0,1.3,0.0,alabama
+Jabari Walker,12,SO,F,6-8,200.0,"Inglewood, CA",AZ Compass Prep (AZ),,203.2,90.7,14.6,9.4,1.2,colorado
+Evan Battey,21,SR,F,6-8,262.0,"View Park, CA",Villa Park HS,,203.2,118.8,12.4,4.7,1.2,colorado
+Keeshawn Barthelemy,3,SO,G,6-2,163.0,"MontrÃ©al, Canada",Thornlea Secondary (ON),,188.0,73.9,11.1,2.4,2.4,colorado
+Tristan Da Silva,23,SO,F,6-8,200.0,"Munich, Germany",Ludwigsgymnasium Munich HS,,203.2,90.7,9.4,3.5,2.0,colorado
+KJ Simpson,2,FR,G,6-2,175.0,"West Hills, CA",Chaminade HS,93 (2021),188.0,79.4,7.4,2.5,2.7,colorado
+Nique Clifford,32,SO,G,6-5,175.0,"Colorado Springs, CO",The Vanguard School,,195.6,79.4,6.7,4.6,1.3,colorado
+Elijah Parquet,24,SR,G,6-3,195.0,"Beaumont, TX",West Brook HS,,190.5,88.5,6.9,2.4,1.4,colorado
+Luke O'Brien,0,SO,G,6-7,200.0,"Littleton, CO",Columbine HS,,200.7,90.7,2.6,2.8,0.8,colorado
+Julian Hammond,1,FR,G,6-2,180.0,"Denver, CO",Cherry Creek HS,,188.0,81.6,2.9,1.7,1.1,colorado
+Lawson Lovering,34,FR,C,7-0,220.0,"Cheyenne, WY",Central HS,61 (2021),213.4,99.8,1.9,1.9,0.6,colorado
+Will Loughlin,30,JR,F,6-10,250.0,"Seattle, WA",Seattle Preparatory School,,208.3,113.4,1.0,0.6,0.0,colorado
+Jack Pease,44,FR,G,5-11,170.0,"Dallas, TX",Highland Park (TX),,180.3,77.1,1.0,0.0,0.0,colorado
+Benan Ersek,40,SR,G,6-2,185.0,"Vienna, Austria",Kent Denver HS,,188.0,83.9,0.0,0.0,0.0,colorado
+Cody Mains,41,FR,F,6-8,210.0,"Fairfax, VA",W.T. Woodson HS,,203.2,95.3,0.0,1.0,0.0,colorado

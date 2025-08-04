@@ -1,0 +1,729 @@
+---
+title: "Assignment3_script"
+author: "Sucheng Li"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+```{r packages}
+# Install required packages if not already installed
+library(tidyverse)
+library(caret)
+library(dbscan)
+library(cluster)
+library(factoextra)
+library(pROC)
+```
+
+
+```{r load data}
+# === Load and Label Data ===
+roster_data <- read_csv("college_rosters_2022.csv")
+draft_data <- read_csv("2022_Draft_Data.csv")
+
+# Extract drafted player names from 'Round 1' column (excluding header row)
+drafted_players <- draft_data$`Round 1`[-1]
+drafted_players <- drafted_players[!is.na(drafted_players)]
+
+# Add Drafted label: 1 if in drafted_players, else 0
+roster_data <- roster_data %>%
+  mutate(Drafted = ifelse(Player %in% drafted_players, 1, 0))
+
+# === Select Features and Preprocess ===
+data <- roster_data %>%
+  select(Height_cm, Weight_kg, PTS, REB, AST, Drafted) %>%
+  na.omit() %>%
+  mutate(Drafted = as.factor(Drafted))
+
+# Normalize numeric features
+preProcValues <- preProcess(data[, -ncol(data)], method = c("center", "scale"))
+norm_data <- predict(preProcValues, data[, -ncol(data)])
+
+# Apply PCA
+pca_model <- prcomp(norm_data, scale. = FALSE)
+pca_data <- as.data.frame(pca_model$x[, 1:2])  # Use first 2 PCs
+pca_data$Drafted <- data$Drafted
+
+# Print contributing features for PC1 and PC2
+cat("\n=== PCA Feature Contributions ===\n")
+contributions <- pca_model$rotation[, 1:3]
+print(contributions)
+
+# Optionally show strongest contributing feature for each PC
+for (i in 1:3) {
+  max_contrib <- contributions[which.max(abs(contributions[, i])), i]
+  max_feature <- rownames(contributions)[which.max(abs(contributions[, i]))]
+  cat(sprintf("PC%d is most influenced by: %s (%.4f)\n", i, max_feature, max_contrib))
+}
+```
+
+
+```{r load data}
+# ---------------------------------------------
+#  Version 1: DBSCAN + Silhouette (Using 3 PCs)
+# ---------------------------------------------
+
+cat("\n=== DBSCAN Clustering on 3 PCs ===\n")
+# Use first 3 Principal Components
+dbscan_result <- dbscan(pca_model$x[, 1:3], eps = 0.5, minPts = 5)
+pca_data$DBSCAN_Cluster <- dbscan_result$cluster
+
+# Silhouette Score (excluding noise)
+valid <- pca_data$DBSCAN_Cluster != 0
+if (any(valid)) {
+  sil <- silhouette(pca_data$DBSCAN_Cluster[valid], dist(pca_model$x[valid, 1:3]))
+  plot(sil, main = "DBSCAN Silhouette Plot (3 PCs)")
+  cat("DBSCAN Average Silhouette Score (3 PCs):", mean(sil[, 3]), "\n")
+} else {
+  cat("DBSCAN found only noise or a single cluster.\n")
+}
+
+# Drafted player density by DBSCAN cluster
+dbscan_summary <- pca_data %>%
+  filter(DBSCAN_Cluster != 0) %>%
+  group_by(DBSCAN_Cluster) %>%
+  summarise(Drafted_Rate = mean(Drafted == 1), Count = n()) %>%
+  arrange(desc(Drafted_Rate))
+
+print(dbscan_summary)
+```
+```{r 2pc}
+# ---------------------------------------------
+#  Version 1: DBSCAN + Silhouette (Using 2 PCs)
+# ---------------------------------------------
+
+cat("\n=== DBSCAN Clustering on 2 PCs ===\n")
+dbscan_result <- dbscan(pca_model$x[, 1:2], eps = 0.5, minPts = 6)
+pca_data$DBSCAN_Cluster <- dbscan_result$cluster
+
+# Silhouette Score (excluding noise)
+valid <- pca_data$DBSCAN_Cluster != 0
+if (any(valid)) {
+  sil <- silhouette(pca_data$DBSCAN_Cluster[valid], dist(pca_model$x[valid, 1:2]))
+  plot(sil, main = "DBSCAN Silhouette Plot (2 PCs)")
+  cat("DBSCAN Average Silhouette Score (2 PCs):", mean(sil[, 3]), "\n")
+} else {
+  cat("DBSCAN found only noise or a single cluster.\n")
+}
+
+# Drafted player density by DBSCAN cluster
+dbscan_summary <- pca_data %>%
+  filter(DBSCAN_Cluster != 0) %>%
+  group_by(DBSCAN_Cluster) %>%
+  summarise(Drafted_Rate = mean(Drafted == 1), Count = n()) %>%
+  arrange(desc(Drafted_Rate))
+
+print(dbscan_summary)
+
+
+# List Drafted Players in Each Cluster
+cluster_ids <- unique(pca_data$DBSCAN_Cluster[pca_data$DBSCAN_Cluster != 0])
+
+for (cid in cluster_ids) {
+  cat("\n=== Cluster", cid, "Drafted Players ===\n")
+  players_in_cluster <- pca_data %>%
+    filter(DBSCAN_Cluster == cid & Drafted == 1)
+  
+  if (nrow(players_in_cluster) > 0) {
+    print(players_in_cluster$Player)
+  } else {
+    cat("No drafted players in this cluster.\n")
+  }
+}
+```
+```{r params for dbscan}
+# Define ranges to search
+eps_values <- seq(0.5, 0.6, by = 0.1)
+minPts_values <- 5:10
+
+# Store search results
+search_results <- data.frame()
+
+for (eps in eps_values) {
+  for (minPts in minPts_values) {
+    cat("\nTrying eps =", eps, "minPts =", minPts, "\n")
+    
+    # Run DBSCAN on 2 PCs
+    dbscan_result <- dbscan(pca_model$x[, 1:2], eps = eps, minPts = minPts)
+    clusters <- dbscan_result$cluster
+    
+    # Skip if all noise or only one cluster
+    if (length(unique(clusters[clusters != 0])) < 1) {
+      next
+    }
+    
+    # Attach cluster labels
+    pca_data$DBSCAN_Cluster <- clusters
+    
+    # Evaluate Drafted Rate per cluster
+    cluster_summary <- pca_data %>%
+      filter(DBSCAN_Cluster != 0) %>%
+      group_by(DBSCAN_Cluster) %>%
+      summarise(Drafted_Rate = mean(Drafted == 1), Count = n()) %>%
+      arrange(desc(Drafted_Rate))
+    
+    if (nrow(cluster_summary) > 0) {
+      best <- cluster_summary$Drafted_Rate[1]
+      worst <- cluster_summary$Drafted_Rate[nrow(cluster_summary)]
+      search_results <- rbind(search_results, data.frame(eps, minPts, Best_Drafted_Rate = best, Worst_Drafted_Rate = worst))
+    }
+  }
+}
+
+# Print all results sorted by best drafted rate
+search_results <- search_results %>%
+  arrange(desc(Best_Drafted_Rate), Worst_Drafted_Rate)
+
+print(search_results)
+```
+```{r dbscan test}
+
+# Install and Load Required Packages
+packages <- c("tidyverse", "caret", "dbscan", "cluster", "factoextra")
+new_packages <- packages[!(packages %in% installed.packages()[,"Package"])]
+if (length(new_packages)) install.packages(new_packages)
+
+library(tidyverse)
+library(caret)
+library(dbscan)
+library(cluster)
+library(factoextra)
+
+# Load Data and Add Drafted Labels
+roster_data <- read_csv("college_rosters_2022.csv")
+draft_data <- read_csv("2022_Draft_Data.csv")
+
+drafted_players <- draft_data$`Round 1`[-1] %>% na.omit()
+
+roster_data <- roster_data %>%
+  mutate(Drafted = ifelse(Player %in% drafted_players, 1, 0))
+
+
+# Feature Selection and Preprocessing
+data <- roster_data %>%
+  select(Height_cm, Weight_kg, PTS, REB, AST, Player, Drafted) %>%
+  na.omit() %>%
+  mutate(Drafted = as.factor(Drafted))
+
+# Preserve Player Names
+player_names <- data$Player
+
+# Normalize Numeric Features
+preProcValues <- preProcess(data[, c("Height_cm", "Weight_kg", "PTS", "REB", "AST")], method = c("center", "scale"))
+norm_data <- predict(preProcValues, data[, c("Height_cm", "Weight_kg", "PTS", "REB", "AST")])
+
+# ================================================
+# PCA Computation and Inspection
+# ================================================
+pca_model <- prcomp(norm_data, scale. = FALSE)
+
+pca_data <- as.data.frame(pca_model$x[, 1:2])  # Use first 2 PCs
+pca_data$Player <- player_names
+pca_data$Drafted <- data$Drafted
+
+# Print PCA Contributions
+cat("\n=== PCA Feature Contributions ===\n")
+contributions <- pca_model$rotation[, 1:3]
+print(contributions)
+for (i in 1:3) {
+  max_contrib <- contributions[which.max(abs(contributions[, i])), i]
+  max_feature <- rownames(contributions)[which.max(abs(contributions[, i]))]
+  cat(sprintf("PC%d is most influenced by: %s (%.4f)\n", i, max_feature, max_contrib))
+}
+
+# ================================================
+# DBSCAN Clustering on 2 PCs
+# ================================================
+cat("\n=== DBSCAN Clustering on 2 PCs ===\n")
+dbscan_result <- dbscan(pca_model$x[, 1:2], eps = 0.5, minPts = 30)
+pca_data$DBSCAN_Cluster <- dbscan_result$cluster
+
+# Silhouette Score (excluding noise)
+valid <- pca_data$DBSCAN_Cluster != 0
+if (any(valid)) {
+  sil <- silhouette(pca_data$DBSCAN_Cluster[valid], dist(pca_model$x[valid, 1:2]))
+  plot(sil, main = "DBSCAN Silhouette Plot (2 PCs)")
+  cat("DBSCAN Average Silhouette Score (2 PCs):", mean(sil[, 3]), "\n")
+} else {
+  cat("DBSCAN found only noise or a single cluster.\n")
+}
+
+# ================================================
+# Drafted Player Density by Cluster
+# ================================================
+dbscan_summary <- pca_data %>%
+  filter(DBSCAN_Cluster != 0) %>%
+  group_by(DBSCAN_Cluster) %>%
+  summarise(Drafted_Rate = mean(Drafted == 1), Count = n()) %>%
+  arrange(desc(Drafted_Rate))
+
+print(dbscan_summary)
+
+# List Drafted Players in Each Cluster
+cluster_ids <- unique(pca_data$DBSCAN_Cluster[pca_data$DBSCAN_Cluster != 0])
+
+for (cid in cluster_ids) {
+  cat("\n=== Cluster", cid, "Drafted Players ===\n")
+  players_in_cluster <- pca_data %>%
+    filter(DBSCAN_Cluster == cid & Drafted == 1)
+  
+  if (nrow(players_in_cluster) > 0) {
+    print(players_in_cluster$Player)
+  } else {
+    cat("No drafted players in this cluster.\n")
+  }
+}
+```
+```{r k-mean}
+# ================================================
+# K-Means + Elbow + Silhouette on 2 PCs
+# ================================================
+
+cat("\n=== K-Means Clustering on 2 PCs ===\n")
+
+# Elbow Method to select k
+wss <- sapply(1:10, function(k) {
+  kmeans(pca_model$x[, 1:2], centers = k, nstart = 10)$tot.withinss
+})
+plot(1:10, wss, type = "b", main = "Elbow Method", xlab = "Number of Clusters (k)", ylab = "Total Within-Cluster Sum of Squares")
+
+# Choose k after inspecting elbow plot; for now, set to 3 as an example
+k <- 3
+kmeans_result <- kmeans(pca_model$x[, 1:2], centers = k, nstart = 10)
+
+# Add cluster labels
+pca_data$KMeans_Cluster <- kmeans_result$cluster
+
+# Silhouette Score for K-Means
+sil_kmeans <- silhouette(pca_data$KMeans_Cluster, dist(pca_model$x[, 1:2]))
+plot(sil_kmeans, main = "K-Means Silhouette Plot (2 PCs)")
+cat("K-Means Average Silhouette Score (2 PCs):", mean(sil_kmeans[, 3]), "\n")
+
+# Drafted player density by K-Means cluster
+kmeans_summary <- pca_data %>%
+  group_by(KMeans_Cluster) %>%
+  summarise(Drafted_Rate = mean(Drafted == 1), Count = n()) %>%
+  arrange(desc(Drafted_Rate))
+
+print(kmeans_summary)
+
+# List Drafted Players in Each K-Means Cluster
+cluster_ids_kmeans <- unique(pca_data$KMeans_Cluster)
+
+for (cid in cluster_ids_kmeans) {
+  cat("\n=== K-Means Cluster", cid, "Drafted Players ===\n")
+  players_in_cluster <- pca_data %>%
+    filter(KMeans_Cluster == cid & Drafted == 1)
+  
+  if (nrow(players_in_cluster) > 0) {
+    print(players_in_cluster$Player)
+  } else {
+    cat("No drafted players in this cluster.\n")
+  }
+}
+```
+
+```{r k-mean params}
+# ================================================
+# K-Means Parameter Tuning: Elbow + Silhouette
+# ================================================
+
+cat("\n=== K-Means Parameter Tuning on 2 PCs ===\n")
+
+# Define range of k to try
+k_values <- 2:10
+
+# Storage for evaluation metrics
+evaluation_results <- data.frame()
+
+# Loop through each k value
+for (k in k_values) {
+  cat("\nEvaluating K =", k, "\n")
+  
+  # Fit K-Means
+  kmeans_result <- kmeans(pca_model$x[, 1:2], centers = k, nstart = 10)
+  
+  # Calculate Total Within-Cluster Sum of Squares (WSS)
+  wss_value <- kmeans_result$tot.withinss
+  
+  # Calculate Silhouette Score
+  sil <- silhouette(kmeans_result$cluster, dist(pca_model$x[, 1:2]))
+  avg_silhouette <- mean(sil[, 3])
+  
+  # Record results
+  evaluation_results <- rbind(evaluation_results, data.frame(k, WSS = wss_value, Silhouette = avg_silhouette))
+}
+
+# Plot Elbow Method (WSS)
+plot(evaluation_results$k, evaluation_results$WSS, type = "b",
+     main = "Elbow Method (WSS)", xlab = "Number of Clusters (k)", ylab = "Total Within-Cluster Sum of Squares")
+
+# Plot Silhouette Scores
+plot(evaluation_results$k, evaluation_results$Silhouette, type = "b",
+     main = "Silhouette Scores", xlab = "Number of Clusters (k)", ylab = "Average Silhouette Width")
+
+# Show all evaluation results
+print(evaluation_results)
+```
+
+```{r k-mean auto selection}
+# ================================================
+# K-Means Parameter Tuning with Auto-Selection
+# ================================================
+
+cat("\n=== K-Means Parameter Tuning with Auto-Selection ===\n")
+
+#Lowest WSS after Elbow Point
+#Highest Average Silhouette Score
+
+# Define range of k to try
+k_values <- 2:10
+
+# Storage for evaluation metrics
+evaluation_results <- data.frame()
+
+# Loop through each k value
+for (k in k_values) {
+  cat("\nEvaluating K =", k, "\n")
+  
+  # Fit K-Means
+  kmeans_result <- kmeans(pca_model$x[, 1:2], centers = k, nstart = 10)
+  
+  # Calculate WSS
+  wss_value <- kmeans_result$tot.withinss
+  
+  # Calculate Silhouette Score
+  sil <- silhouette(kmeans_result$cluster, dist(pca_model$x[, 1:2]))
+  avg_silhouette <- mean(sil[, 3])
+  
+  # Record results
+  evaluation_results <- rbind(evaluation_results, data.frame(k, WSS = wss_value, Silhouette = avg_silhouette))
+}
+
+# Plot Elbow Method (WSS)
+plot(evaluation_results$k, evaluation_results$WSS, type = "b",
+     main = "Elbow Method (WSS)", xlab = "Number of Clusters (k)", ylab = "Total Within-Cluster Sum of Squares")
+
+# Plot Silhouette Scores
+plot(evaluation_results$k, evaluation_results$Silhouette, type = "b",
+     main = "Silhouette Scores", xlab = "Number of Clusters (k)", ylab = "Average Silhouette Width")
+
+# Show all evaluation results
+print(evaluation_results)
+
+# Auto-select k with the highest silhouette score
+best_k <- evaluation_results$k[which.max(evaluation_results$Silhouette)]
+cat("\nSelected Optimal k Based on Silhouette:", best_k, "\n")
+
+# Re-run K-Means with optimal k
+final_kmeans_result <- kmeans(pca_model$x[, 1:2], centers = best_k, nstart = 10)
+pca_data$KMeans_Cluster <- final_kmeans_result$cluster
+
+# Summarize drafted player density
+kmeans_summary <- pca_data %>%
+  group_by(KMeans_Cluster) %>%
+  summarise(Drafted_Rate = mean(Drafted == 1), Count = n()) %>%
+  arrange(desc(Drafted_Rate))
+
+print(kmeans_summary)
+
+# List drafted players in each cluster
+for (cid in unique(pca_data$KMeans_Cluster)) {
+  cat("\n=== K-Means Cluster", cid, "Drafted Players ===\n")
+  players_in_cluster <- pca_data %>%
+    filter(KMeans_Cluster == cid & Drafted == 1)
+  
+  if (nrow(players_in_cluster) > 0) {
+    print(players_in_cluster$Player)
+  } else {
+    cat("No drafted players in this cluster.\n")
+  }
+}
+```
+```{r cluster label}
+# Run K-Means with k = 5
+kmeans_result <- kmeans(pca_model$x[, 1:2], centers = 5, nstart = 10)
+pca_data$KMeans_Cluster <- as.factor(kmeans_result$cluster)  # Treat as categorical predictor
+# Attach player names if not already included in pca_data
+pca_data$Player <- roster_data$Player[as.numeric(rownames(pca_data))]
+
+# Prepare an empty data frame to collect results
+player_cluster_list <- data.frame(Cluster = character(), Player = character(), stringsAsFactors = FALSE)
+
+# List players by cluster
+cluster_ids_train <- unique(pca_data$KMeans_Cluster)
+
+for (cid in cluster_ids_train) {
+  cat("\n=== K-Means Cluster", cid, "Players ===\n")
+  players_in_cluster <- pca_data %>%
+    filter(KMeans_Cluster == cid)
+
+  if (nrow(players_in_cluster) > 0) {
+    # Add Drafted label to player names
+    labeled_names <- ifelse(players_in_cluster$Drafted == 1,
+                            paste(players_in_cluster$Player, "(Drafted)"),
+                            players_in_cluster$Player)
+    print(labeled_names)
+
+    # Prepare for CSV export
+    cluster_data <- data.frame(
+      Cluster = cid,
+      Player = players_in_cluster$Player,
+      Drafted_Label = ifelse(players_in_cluster$Drafted == 1, "Drafted", "Not Drafted"),
+      stringsAsFactors = FALSE
+    )
+    player_cluster_list <- rbind(player_cluster_list, cluster_data)
+  } else {
+    cat("No players in this cluster.\n")
+  }
+}
+
+# Collect the full data for export
+export_data <- pca_data %>%
+  select(PC1, PC2, Player, Drafted, KMeans_Cluster)
+
+# Save to CSV
+#write_csv(export_data, "training_cluster_players.csv")
+#cat("\nSaved full player-cluster data to training_cluster_players.csv\n")
+```
+
+```{r cluster only}
+# Logistic regression using cluster membership only
+logit_model_cluster <- glm(Drafted ~ KMeans_Cluster, data = pca_data, family = "binomial")
+summary(logit_model_cluster)
+```
+```{r cluster only in-sample error}
+# Predict probabilities using cluster-only model
+pred_probs <- predict(logit_model_cluster, type = "response")
+
+# ROC Curve and AUC
+if (!require(pROC)) install.packages("pROC")
+library(pROC)
+roc_obj <- roc(pca_data$Drafted, pred_probs)
+plot(roc_obj, main = "ROC Curve (Cluster Only)")
+cat("AUC (Cluster Only):", auc(roc_obj), "\n")
+
+# Find optimal threshold
+optimal_coords <- coords(roc_obj, "best", ret = c("threshold", "sensitivity", "specificity"))
+optimal_threshold <- as.numeric(optimal_coords["threshold"])
+cat("Optimal Threshold (Cluster Only):", optimal_threshold, "\n")
+
+# Reclassify with optimal threshold
+pred_class_optimal <- ifelse(pred_probs > optimal_threshold, 1, 0)
+
+# Confusion matrix
+conf_matrix_optimal <- table(Predicted = pred_class_optimal, Actual = as.numeric(as.character(pca_data$Drafted)))
+print(conf_matrix_optimal)
+
+# Accuracy
+accuracy_optimal <- sum(diag(conf_matrix_optimal)) / sum(conf_matrix_optimal)
+cat("Model Accuracy (Cluster Only, Optimal Threshold):", accuracy_optimal, "\n")
+```
+```{r cluster+base+stats in-sample error}
+# Prepare data with original stats + cluster
+data_with_cluster <- data %>%
+  mutate(KMeans_Cluster = pca_data$KMeans_Cluster)
+
+# Fit logistic regression model using cluster + player stats
+logit_model_full <- glm(Drafted ~ Height_cm + Weight_kg + PTS + REB + AST + KMeans_Cluster,
+                        data = data_with_cluster, family = binomial(link="logit"))
+
+# Predict probabilities
+pred_probs_full <- predict(logit_model_full, type = "response")
+
+# ROC Curve and AUC
+if (!require(pROC)) install.packages("pROC")
+library(pROC)
+roc_obj_full <- roc(data_with_cluster$Drafted, pred_probs_full)
+plot(roc_obj_full, main = "ROC Curve (Cluster + Stats)")
+cat("AUC (Cluster + Stats):", auc(roc_obj_full), "\n")
+
+# Find optimal threshold
+optimal_coords_full <- coords(roc_obj_full, "best", ret = c("threshold", "sensitivity", "specificity"))
+optimal_threshold_full <- as.numeric(optimal_coords_full["threshold"])
+cat("Optimal Threshold (Cluster + Stats):", optimal_threshold_full, "\n")
+
+# Reclassify with optimal threshold
+pred_class_optimal_full <- ifelse(pred_probs_full > optimal_threshold_full, 1, 0)
+
+# Confusion matrix
+conf_matrix_optimal_full <- table(Predicted = pred_class_optimal_full, Actual = as.numeric(as.character(data_with_cluster$Drafted)))
+print(conf_matrix_optimal_full)
+
+# Accuracy
+accuracy_optimal_full <- sum(diag(conf_matrix_optimal_full)) / sum(conf_matrix_optimal_full)
+cat("Model Accuracy (Cluster + Stats, Optimal Threshold):", accuracy_optimal_full, "\n")
+```
+
+```{r}
+# Extract confusion matrix elements
+TP <- conf_matrix_optimal_full["1", "1"]
+FP <- conf_matrix_optimal_full["1", "0"]
+FN <- conf_matrix_optimal_full["0", "1"]
+TN <- conf_matrix_optimal_full["0", "0"]
+
+# Calculate Precision, Recall, F1-Score
+precision <- TP / (TP + FP)
+recall <- TP / (TP + FN)
+f1_score <- 2 * (precision * recall) / (precision + recall)
+
+# Report results
+cat("Precision:", round(precision, 3), "\n")
+cat("Recall (Sensitivity):", round(recall, 3), "\n")
+cat("F1-Score:", round(f1_score, 3), "\n")
+```
+
+```{r model test}
+# Load Test Data
+test_roster_data <- read_csv("college_rosters_2021.csv")
+
+# --- If test data includes Drafted info, uncomment and adapt ---
+draft_data_test <- read_csv("2021_Draft_Data.csv")
+drafted_players_test <- draft_data_test$`Round 1`[-1] %>% na.omit()
+test_roster_data <- test_roster_data %>%
+  mutate(Drafted = ifelse(Player %in% drafted_players_test, 1, 0))
+
+# Select Features (Same as Training)
+test_data <- test_roster_data %>%
+  select(Height_cm, Weight_kg, PTS, REB, AST) %>%
+  na.omit()
+
+# Apply Training Normalization
+norm_test_data <- predict(preProcValues, test_data)
+
+# Project Test Data onto Training PCA Space
+test_pca_proj <- as.data.frame(as.matrix(norm_test_data) %*% pca_model$rotation[, 1:2])
+
+# Assign Cluster Labels Using Training KMeans Centers
+test_cluster_labels <- apply(test_pca_proj, 1, function(row) {
+  dists <- apply(kmeans_result$centers, 1, function(center) sum((row - center)^2))
+  which.min(dists)
+})
+test_data$KMeans_Cluster <- as.factor(test_cluster_labels)
+
+# Predict Draft Probabilities Using Training Model
+test_pred_probs <- predict(logit_model_full, newdata = test_data, type = "response")
+
+# Classify Using Training Optimal Threshold
+test_pred_class <- ifelse(test_pred_probs > optimal_threshold_full, 1, 0)
+
+# ================================================
+# Test Set Evaluation: Accuracy, Precision, Recall, F1
+# ================================================
+
+# Build Confusion Matrix
+conf_matrix_test <- table(Predicted = test_pred_class, Actual = as.numeric(as.character(test_roster_data$Drafted)))
+print(conf_matrix_test)
+
+# Calculate Accuracy
+accuracy_test <- sum(diag(conf_matrix_test)) / sum(conf_matrix_test)
+cat("Test Set Accuracy (Cluster + Stats, Optimal Threshold):", round(accuracy_test, 3), "\n")
+
+# Extract Confusion Matrix Elements
+TP_test <- conf_matrix_test["1", "1"]
+FP_test <- conf_matrix_test["1", "0"]
+FN_test <- conf_matrix_test["0", "1"]
+TN_test <- conf_matrix_test["0", "0"]
+
+# Calculate Precision, Recall, F1-Score
+# Safe checks for division by zero
+precision_test <- ifelse((TP_test + FP_test) > 0, TP_test / (TP_test + FP_test), NA)
+recall_test <- ifelse((TP_test + FN_test) > 0, TP_test / (TP_test + FN_test), NA)
+f1_score_test <- ifelse(!is.na(precision_test) && !is.na(recall_test) && (precision_test + recall_test) > 0,
+                        2 * (precision_test * recall_test) / (precision_test + recall_test), NA)
+
+# Report Results
+cat("Test Set Precision:", round(precision_test, 3), "\n")
+cat("Test Set Recall (Sensitivity):", round(recall_test, 3), "\n")
+cat("Test Set F1-Score:", round(f1_score_test, 3), "\n")
+```
+```{r drafted player names in test set}
+# Attach Player names and Drafted labels to test_pca_proj for reporting
+test_pca_proj$Player <- test_roster_data$Player[as.numeric(rownames(test_data))]
+test_pca_proj$Drafted <- test_roster_data$Drafted[as.numeric(rownames(test_data))]
+test_pca_proj$KMeans_Cluster <- test_data$KMeans_Cluster
+
+#write_csv(test_pca_proj, "test_pca_proj_with_players.csv")
+#cat("\nSaved test_pca_proj_with_players.csv\n")
+
+# Identify all clusters present in the test set
+cluster_ids_test <- unique(test_pca_proj$KMeans_Cluster)
+
+# Loop through clusters and print drafted players
+for (cid in cluster_ids_test) {
+  cat("\n=== K-Means Cluster", cid, "Drafted Players ===\n")
+  players_in_cluster <- test_pca_proj %>%
+    filter(KMeans_Cluster == cid & Drafted == 1)
+  
+  if (nrow(players_in_cluster) > 0) {
+    print(players_in_cluster$Player)
+  } else {
+    cat("No drafted players in this cluster.\n")
+  }
+}
+```
+
+```{r all players in test set}
+# Loop through clusters and print drafted players
+for (cid in cluster_ids_test) {
+  cat("\n=== K-Means Cluster", cid, "Players ===\n")
+  players_in_cluster <- test_pca_proj %>%
+    filter(KMeans_Cluster == cid)
+
+  if (nrow(players_in_cluster) > 0) {
+    # Build labeled player names
+    labeled_names <- ifelse(players_in_cluster$Drafted == 1,
+                            paste(players_in_cluster$Player, "(Drafted)"),
+                            players_in_cluster$Player)
+    print(labeled_names)
+  } else {
+    cat("No players in this cluster.\n")
+  }
+}
+```
+
+
+```{r TP and FN}
+cat("\n=== True Positives (Correctly Predicted Drafted Players) ===\n")
+true_positives <- test_roster_data[test_pred_class == 1 & test_roster_data$Drafted == 1, ]
+if (nrow(true_positives) > 0) {
+  print(true_positives$Player)
+} else {
+  cat("None\n")
+}
+cat("\n=== False Negatives (Missed Drafted Players) ===\n")
+false_negatives <- test_roster_data[test_pred_class == 0 & test_roster_data$Drafted == 1, ]
+if (nrow(false_negatives) > 0) {
+  print(false_negatives$Player)
+} else {
+  cat("None\n")
+}
+```
+```{r FP}
+cat("\n=== Flase Positives (Predicted Drafted Players but undrafted) ===\n")
+true_positives <- test_roster_data[test_pred_class == 1 & test_roster_data$Drafted == 0, ]
+if (nrow(true_positives) > 0) {
+  print(true_positives$Player)
+} else {
+  cat("None\n")
+}
+```
+
+```{r TN}
+cat("\n=== True Negatives (Undrafted Players) ===\n")
+false_negatives <- test_roster_data[test_pred_class == 0 & test_roster_data$Drafted == 0, ]
+if (nrow(false_negatives) > 0) {
+  print(false_negatives$Player)
+} else {
+  cat("None\n")
+}
+```
+
