@@ -1,6 +1,6 @@
 # 🏀 Predictive Model for Drafting College Basketball Players
 
-This project develops a machine learning pipeline to predict whether college basketball players are likely to be drafted into the NBA. By leveraging historical NCAA player statistics, we apply clustering and classification techniques to uncover patterns and assist scouting decisions.
+This project develops a machine learning pipeline to predict whether college basketball players are likely to be drafted into the NBA. By leveraging historical NCAA player statistics, this project applies clustering and classification techniques to uncover patterns and assist scouting decisions.
 
 ---
 
@@ -13,23 +13,17 @@ This project develops a machine learning pipeline to predict whether college bas
 
 ---
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 Predictive-Model-for-Drafting-College-Basketball-Players/
+├── reports/
+├── scripts/
+├── data/
+├── LICENSE
 
-\```
+├── report_pdf.pdf
 
-Predictive-Model-for-Drafting-College-Basketball-Players/
-
-├── data/          # Raw and preprocessed datasets
-
-├── reports/        # Figures, plots, and model evaluation results
-
-├── scripts/        # Utility functions and ML pipeline scripts
-
-├── README.md        # Project documentation
-
-\```
+└── README.md
 
 ---
 
